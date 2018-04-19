@@ -1,0 +1,45 @@
+.container {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 20rem;
+}
+
+.container__header {
+  border-bottom: 1px solid #eeeeee;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.container__footer {
+  border-top: 1px solid #eeeeee;
+  padding: 1rem 1rem 0 1rem;
+  background-color: white;
+  text-align: left;
+}
+
+.news-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.news-content {
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-result-notice {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.card-index {
+  text-align: right;
+}

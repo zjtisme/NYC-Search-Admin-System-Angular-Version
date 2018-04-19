@@ -1,0 +1,18 @@
+<div id="login-page">
+  <h1 class="page-title">Login Page</h1>
+  <div class="row">
+    <div class="columns small-centered small-10 medium-6 large-4">
+      <div class="callout callout-auth">
+          <label class="input-form"> Username:
+              <input id="login-username" type="text" name="username" placeholder="input username..." [(ngModel)]="username"/>
+          </label>
+
+          <label class="input-form"> Password:
+                <input id="login-password" type="password" name="password" placeholder="input password..." [(ngModel)]="password"/>
+          </label>
+          <button id="login-confirm-button" class="button expanded" (click)="handleLogin(username, password)">User Login</button>
+          <p id="login-error" class="error-message">{{errorMsg}}</p>
+      </div>
+    </div>
+  </div>
+</div>

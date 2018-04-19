@@ -1,0 +1,33 @@
+<div *ngIf="login; then thenBlock; else elseBlock">
+</div>
+<ng-template #thenBlock>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+          <li class="menu-text logo" id="private-welcome-text" routerLink="/account">{{greetings}}</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a id="configure-button"  class="button success" routerLink="/account/settings">Settings</a></li>
+        <li><a id="signup-button" class="button warning" (click)="handleLogout()">logout</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+          <li class="menu-text logo" id="public-welcome-text" routerLink="/">Welcome to NYC Search Portal</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a id="login-button"  class="button success" routerLink="/login">Login</a></li>
+        <li><a id="signup-button" class="button warning" routerLink="/signup">Signup</a></li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

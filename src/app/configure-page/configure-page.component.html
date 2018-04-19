@@ -1,0 +1,42 @@
+<div id="configure-page">
+        <h1 class="page-title">Your Profile</h1>
+          <div class="row">
+            <div class="columns small-centered small-10 medium-6 large-4">
+              <div class="callout callout-auth">
+          <label class="input-form">Username:
+            <input id="configure-username" type="text" name="userName" [(ngModel)]="userName"/>
+          </label>
+          <label class="input-form">Password:
+            <input id="configure-password1" type="password" name="pass1" [(ngModel)]="password1"/>
+          </label>
+          <label class="input-form">Password Again:
+            <input id="configure-password2" type="password" name="pass2" [(ngModel)]="password2"/>
+          </label>
+          <label class="input-form">FirstName:
+            <input id="configure-firstname" type="text"  name="firstName" [(ngModel)]="firstName"/>
+          </label>
+          <label class="input-form">LastName:
+            <input id="configure-lastname" type="text" name="lastName" [(ngModel)]="lastName"/>
+          </label>
+          <label class="input-form">Gender:
+              <select id="configure-gender" name="gender" [(ngModel)]="gender">
+                <option value=""  id="configure-gender-null">---------</option>
+                <option value="Male"  id="configure-gender-male">Male</option>
+                <option value="Female"  id="configure-gender-female">Female</option>
+              </select>
+          </label>
+          <label class="input-form">Email:
+            <input id="configure-email" type="email" name="email" [(ngModel)]="email"/>
+          </label>
+          <label class="input-form">PhoneNumber:
+            <input id="configure-phonenumber" type="tel" name="phoneNumber" [(ngModel)]="phoneNumber"/>
+          </label>
+          <label class="input-form">Birthday:
+            <input id="configure-birthday" type="date" name="birthday" [(ngModel)]="birthday"/>
+          </label>
+          <button id="configure-confirm-button" class="success button expanded" (click)="handleConfigure()">Submit</button>
+          <p class="error-message">{{errorMsg}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

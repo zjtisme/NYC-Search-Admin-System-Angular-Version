@@ -1,0 +1,24 @@
+#login-button, #configure-button, #signup-button, #logout-button {
+  width: 5rem;
+}
+
+.top-bar {
+  background-color: #5e95ed;
+}
+
+.logo {
+  background-color: #5e95ed;
+  cursor: pointer;
+}
+
+#public-welcome-text, #private-welcome-text {
+  color: #efef1a;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  background-color: #5e95ed;
+}

@@ -1,0 +1,42 @@
+<div id="signup-page">
+        <h1 class="page-title">Signup Page</h1>
+          <div class="row">
+            <div class="columns small-centered small-10 medium-6 large-4">
+              <div class="callout callout-auth">
+          <label class="input-form">Username:
+            <input id="signup-username" type="text" placeholder="input username..." [(ngModel)]="userName"/>
+          </label>
+          <label class="input-form">Password:
+            <input id="signup-password1" type="password" placeholder="input password..." [(ngModel)]="password1"/>
+          </label>
+          <label class="input-form">Password Again:
+            <input id="signup-password2" type="password" placeholder="input password again..." [(ngModel)]="password2"/>
+          </label>
+          <label class="input-form">FirstName:
+            <input id="signup-firstname" type="text" placeholder="your firstname..." [(ngModel)]="firstName"/>
+          </label>
+          <label class="input-form">LastName:
+            <input id="signup-lastname" type="text" placeholder="your lastname..." [(ngModel)]="lastName"/>
+          </label>
+          <label class="input-form">Gender:
+              <select id="signup-gender" [(ngModel)]="gender">
+                <option value="" id="signup-gender-null">---------</option>
+                <option value="Male" id="signup-gender-male">Male</option>
+                <option value="Female" id="signup-gender-female">Female</option>
+              </select>
+          </label>
+          <label class="input-form">Email:
+            <input id="signup-email" type="email" placeholder="your email..." [(ngModel)]="email"/>
+          </label>
+          <label class="input-form">PhoneNumber:
+            <input id="signup-phonenumber" type="tel" placeholder="your phone number..." [(ngModel)]="phoneNumber"/>
+          </label>
+          <label class="input-form">Birthday:
+            <input id="signup-birthday" type="date" placeholder="your birthday..." [(ngModel)]="birthday"/>
+          </label>
+          <button id="signup-confirm-button" class="button expanded" (click)="handleSignup()">User Signup</button>
+          <p class="error-message">{{errorMsg}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

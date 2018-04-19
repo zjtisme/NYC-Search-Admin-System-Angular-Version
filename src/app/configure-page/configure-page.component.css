@@ -1,0 +1,15 @@
+.page-title {
+  padding: 1rem 0;
+  color: #42c5f4;
+  text-align: center;
+}
+
+
+.input-form {
+  padding: 1rem 0;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}

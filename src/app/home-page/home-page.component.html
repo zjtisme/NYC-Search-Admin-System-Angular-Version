@@ -1,0 +1,31 @@
+<div class="container">
+    <div id="home-page" class="row">
+        <div class="columns small-centered small-10 medium-8 large-8">
+          <div class="container__header">
+            <input type="search" id="search-bar" placeholder="search for latest 50 news" [(ngModel)]="keyword" (keydown)="onKeydown($event)"/>
+            <div class="expanded button-group">
+              <button id="search-confirm-button" class="button expanded" (click)="fetchNews()">search</button>
+              <button id="search-clear-button" class="button expanded alert" (click)="clearAll()">clear</button>
+            </div>
+          </div>
+          <div class="container__footer" id="news-list" *ngIf="news; else elseBlock">
+            <div data-news-display class="news-data card" *ngFor="let new of news; let i=index">
+              <div class="card-section">
+                <p><span class="news-title">Request ID:</span> <span class="news-content">{{new.request_id}}</span></p>
+                <p><span class="news-title">Agency Name:</span> <span class="news-content">{{new.agency_name}}</span></p>
+                <p><span class="news-title">Section Name:</span> <span class="news-content">{{new.section_name}}</span></p>
+                <p><span class="news-title">Category Description:</span> <span class="news-content">{{new.category_description}}</span></p>
+                <p><span class="news-title">Short Title:</span> <span class="news-content">{{new.short_title}}</span></p>
+                <p><span class="news-title">End Date:</span> <span class="news-content">{{new.end_date}}</span></p>
+                <p><span class="news-title">Start Date:</span> <span class="news-content">{{new.start_date}}</span></p>
+                <p class="card-index"> {{i+1}}</p>
+              </div>
+              <hr/>
+            </div>
+          </div>
+          <ng-template #elseBlock>
+            <p className="no-result-notice">No search results!</p>
+          </ng-template>
+        </div>
+    </div>
+</div>
