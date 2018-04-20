@@ -2,21 +2,26 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LoginStateService {
-  loginUserInfo = {
-    "loginState": false,
-    "id": 0,
-    "userName": "",
-    "password": "",
-    "firstName": "",
-    "lastName": "",
-    "gender": "",
-    "email": "",
-    "phoneNumber": "",
-    "birthday": "",
-    "loginError": "",
-    "signupError": "",
-    "configureError": ""
-  };
+
+    loginUserInfo = {
+      "loginState": false,
+      "id": 0,
+      "userName": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "gender": "",
+      "email": "",
+      "phoneNumber": "",
+      "birthday": "",
+      "loginError": "",
+      "signupError": "",
+      "configureError": ""
+    };
+
+  getLoginUserInfo() {
+    return this.loginUserInfo;
+  }
 
   setLoginError(error) {
      this.loginUserInfo.loginError = error;

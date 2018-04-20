@@ -6,6 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { PrivatePageComponent } from './private-page/private-page.component';
 import { ConfigurePageComponent } from './configure-page/configure-page.component';
+import { AuthGuardService } from './service/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -14,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    component: PrivatePageComponent
+    component: PrivatePageComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'account/settings',
-    component: ConfigurePageComponent
+    component: ConfigurePageComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',
@@ -27,6 +30,10 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupPageComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

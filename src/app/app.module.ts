@@ -14,6 +14,7 @@ import { LoginStateService } from './service/login-state.service';
 import { UserLoginService } from './service/user-login.service';
 import { UserConfigureService } from './service/user-configure.service';
 import { UserSignupService } from './service/user-signup.service';
+import { AuthGuardService } from './service/auth-guard.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { PrivatePageComponent } from './private-page/private-page.component';
@@ -36,7 +37,7 @@ import { ConfigurePageComponent } from './configure-page/configure-page.componen
     FormsModule,
     AppRoutingModule
   ],
-  providers: [NewsService, UserLoginService, LoginStateService, UserConfigureService, UserSignupService],
+  providers: [NewsService, UserLoginService, LoginStateService, UserConfigureService, UserSignupService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

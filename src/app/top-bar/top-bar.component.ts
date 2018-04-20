@@ -30,6 +30,7 @@ export class TopBarComponent implements OnInit {
 
   handleLogout() {
     this.loginStateService.resetLoginInfo();
+    localStorage.removeItem('ng-login');
     this.router.navigateByUrl("/");
   }
 

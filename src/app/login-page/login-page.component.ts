@@ -52,6 +52,7 @@ export class LoginPageComponent implements OnInit {
                 this.loginStateService.setPhoneNumber(cand.phoneNumber);
                 this.loginStateService.setBirthday(cand.birthday);
                 this.loginStateService.setLoginError("");
+                localStorage.setItem('ng-login', JSON.stringify(this.loginStateService.getLoginUserInfo()));
                 this.errorMsg = this.loginStateService.getLoginError();
                 this.router.navigateByUrl("/account");
               }
