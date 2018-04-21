@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginStateService } from './service/login-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { LoginStateService } from './service/login-state.service';
 export class AppComponent {
   title = 'app';
 
-  constructor(private loginStateService: LoginStateService) {}
+  constructor(private loginStateService: LoginStateService,
+              private router: Router) {}
 
   ngOnInit() {
     let curState = localStorage.getItem("ng-login");
@@ -25,6 +27,7 @@ export class AppComponent {
       this.loginStateService.setGender(parsedState.gender);
       this.loginStateService.setPhoneNumber(parsedState.phoneNumber);
       this.loginStateService.setBirthday(parsedState.birthday);
+      this.router.navigateByUrl("/account");
     } else {
       this.loginStateService.setLoginState(false);
       this.loginStateService.setId(0);
